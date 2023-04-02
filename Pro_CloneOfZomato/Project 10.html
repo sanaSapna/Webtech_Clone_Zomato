@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOMATO</title>
+</head>
+
+<style>
+    body {
+        box-sizing: border-box;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    #headercon {
+        border: 0.2vw solid gray;
+        width: 99.7vw;
+        height: 30vw;
+    }
+
+    #backimg {
+        border: 0.2vw solid gray;
+        width: 99.7vw;
+        height: 30vw;
+        background-image: url('1.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: blur(7px);
+        position: absolute;
+        top: 0;
+        z-index: -1;
+    }
+
+    #navbar {
+        margin: 4vh auto;
+        width: 80vw;
+        height: 5vh;
+        font-size: 2.7vh;
+        color: white;
+        font-weight: bolder;
+    }
+
+    #nav1 {
+        width: 20%;
+        height: 5vh;
+        float: left;
+        display: flext;
+        text-decoration: none;
+    }
+
+    #gal {
+        height: 2vh;
+        width: 2vh;
+    }
+
+    #nav2 {
+        width: 80%;
+        height: 5vh;
+        float: right;
+        text-align: right;
+    }
+
+    li {
+        list-style: none;
+        display: inline;
+        margin-left: 3vw;
+        font-weight: bolder;
+    }
+
+    #mwin {
+        /* border: 1px solid red; */
+        height: 40vh;
+        width: 60vw;
+        margin: auto;
+        align-items: stretch;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+
+    h1 {
+
+        color: rgba(233, 225, 225, 0.804);
+        font-size: 6vw;
+        margin-bottom: 0px;
+        margin-top: 1vw;
+        font-family: Kristen ITC;
+        text-shadow: -1px 1px 0 #f10808,1px 1px 0 #d6786f,1px -1px 0 #e80d0d,-1px -1px 0 #c6c23f;
+    }
+
+    #details {
+        color: rgba(248, 246, 246, 0.995);
+        font-size: 3vw;
+        margin-top: 1vw;
+        margin-bottom: 0px;
+    }
+
+    #ls {
+        height: 8vh;
+        background-color: whitesmoke;
+        display: flex;
+        border: 1px gray solid;
+        border-radius: 10px;
+        margin-top: 2vw;
+    }
+
+    #loclogo {
+        width: 6%;
+        height: 100%;
+        background-image: url(loclogo.png);
+        background-size: cover;
+        background-color: whitesmoke;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    #sel1 {
+        height: 100%;
+        width: 30%;
+        background-color: whitesmoke;
+        border: none;
+        font-size: 1vw;
+        color: gray;
+    }
+
+    i {
+        font-weight: 100;
+        margin: auto;
+        font-weight: bold;
+        font-size: 2vw;
+        color: gray;
+        width: 1%;
+
+
+    }
+
+    #search {
+        width: 7%;
+        height: 100%;
+        background-image: url(searchlogo.png);
+        background-size: cover;
+    }
+
+    #searchin {
+        display: flex;
+        margin: auto;
+        width: 68%;
+        height: 100%;
+        border: none;
+        background-color: whitesmoke;
+        display: flex;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        margin-left: 2%;
+    }
+
+    #entkey {
+        width: 100%;
+        height: 80%;
+        border: none;
+        margin: auto;
+        background-color: whitesmoke;
+        font-size: 1vw;
+        color: gray;
+    }
+
+    #main {
+        width: 80vw;
+        height: 20vw;
+        margin-top: 6vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+
+    #r1 {
+        height: 15vw;
+        width: 100%;
+        display: flex;
+        align-items: stretch;
+
+    }
+
+    #c1 {
+
+        display: flex;
+        width: 25%;
+        flex-direction: column;
+        margin-left: 6%;
+    }
+
+    #c2 {
+
+        display: flex;
+        width: 25%;
+        flex-direction: column;
+        margin-left: 6%;
+    }
+
+    #c3 {
+
+        display: flex;
+        width: 25%;
+        flex-direction: column;
+        margin-left: 6%;
+    }
+
+    #img1 {
+        height: 80%;
+        width: 100%;
+        background-image: url('2.jpeg');
+        background-size: cover;
+    }
+    #img2 {
+        height: 80%;
+        width: 100%;
+        background-image: url('3.jpeg');
+        background-size: cover;
+    }
+    #img3 {
+        height: 80%;
+        width: 100%;
+        background-image: url('4.jpeg');
+        background-size: cover;
+    }
+
+    .text {
+        height: 20%;
+        width: 100%;
+
+    }
+
+    #c1,
+    #c2,
+    #c3 {
+        border: 1px gray solid;
+        border-radius: 10px;
+    }
+
+    .p1 {
+        font-size: 1vw;
+        margin: 0.3vw;
+    }
+
+    .p2 {
+        font-size: 0.7vw;
+        margin: 0.3vw;
+
+    }
+
+    #c1:hover,
+    #c2:hover,
+    #c3:hover {
+        display: flex;
+        width: 30%;
+        flex-direction: column;
+        margin-left: 6%;
+        height: 110%;
+    }
+</style>
+
+<body>
+
+    <!-- header -->
+
+    <div id="backimg">
+    </div>
+    <div id="headercon">
+
+        <div id="navbar">
+            <div id="nav1">
+                <img src="getapplogo.png" alt="getapp.jpg" id="gal"> Get the App
+            </div>
+            <div id="nav2">
+                <li id="list1">Investor Relations</li>
+                <li id="list2">Add restaurant</li>
+                <li id="list3">Log in</li>
+                <li id="list4">Sign up</li>
+            </div>
+        </div>
+        <div id="mwin">
+            <h1 id="title">TOMATO</h1>
+            <p id="details">Discover the best food & drinks in Pune</p>
+            <div id="ls">
+                <div id="loclogo">
+                </div>
+                <select id="sel1">
+                    <option value="pune" selected>Pune</option>
+                    <option value="mumbai">Mumbai</option>
+                    <option value="delhi">Delhi</option>
+                </select>
+                <i>|</i>
+                <div id="search">
+                </div>
+                <div id="searchin">
+                    <input type="text" placeholder="Search for restaurant, cuisine or a dish" id="entkey">
+                </div>
+            </div>
+        </div>
+
+        <!-- middle -->
+
+        <div id="main">
+
+
+            <div id="r1">
+                <div id="c1">
+                    <div id="img1"></div>
+                    <div class="text">
+                        <p class="p1">Order Online</p>
+                        <p class="p2">Stay home and order to your doorstep</p>
+                    </div>
+                </div>
+                <div id="c2">
+                    <div id="img2"></div>
+                    <div class="text">
+                        <p class="p1">Dining</p>
+                        <p class="p2">View the city's favorite dining venues</p>
+                    </div>
+                </div>
+                <div id="c3">
+                    <div id="img3"></div>
+                    <div class="text">
+                        <p class="p1">Nightlife and Clubs</p>
+                        <p class="p2">Explore the city's top nightlife outlets</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
